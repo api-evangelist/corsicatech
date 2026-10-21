@@ -1,0 +1,61 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.corsicatech.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: corsicatech.com
+  role: api
+  relation: own
+- host: corsicatech.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - PrivacyPolicy
+  - Newsroom
+  - Leadership
+  - Website
+  - Documentation
+  - GettingStarted
+  - Support
+  - Blog
+  serves:
+  - docs
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: corsicatech.com
+  role: website
+  relation: own
+- host: portal.corsicatech.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: corsicatech.com
+  role: other
+  relation: own

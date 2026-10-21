@@ -1,23 +1,77 @@
 aid: corsicatech
+
 name: Corsica Technologies
-description: 'Corsica Technologies is a company surfaced via the API Evangelist harvest backlog (source:
-  g2-catalog) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://corsicatech.com/wp-content/uploads/2024/11/Cyber-threats-blocked.png
+
+description: Corsica Technologies is a US‑based managed service provider offering strategic IT, cybersecurity, and AI consulting services. The
+  company helps organizations achieve scalability, cyber‑resilience, and data integration through managed IT support, cloud services, and digital
+  transformation. Their offerings include cybersecurity guarantees, AI strategy, ERP and CRM consulting, and staff augmentation, positioning them
+  as a comprehensive partner for modern enterprise technology needs.
+
 url: https://raw.githubusercontent.com/api-evangelist/corsicatech/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
 - Company
-apis: []
+- IT Services
+- Cybersecurity
+- AI Consulting
+- Managed Services
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/corsicatech-llms.txt
+- type: Hosts
+  url: hosts/corsicatech-hosts.yml
+- type: Vendors
+  url: vendors/corsicatech-vendors.yml
+- type: PrivacyPolicy
+  url: https://corsicatech.com/privacy-policy/
+- type: Newsroom
+  url: https://corsicatech.com/news/corsica-technologies-awarded-the-2023-cybersecurity-excellence-award-by-internet-telephony-magazine/
+- type: Leadership
+  url: https://corsicatech.com/about/leadership/
+- type: DomainSecurity
+  url: security/corsicatech-domain-security.yml
 - type: Website
   url: https://corsicatech.com/
+- type: Documentation
+  url: https://corsicatech.com/services/
+- type: GettingStarted
+  url: https://corsicatech.com/about/
+- type: Support
+  url: https://corsicatech.com/contact/
+- type: Blog
+  url: https://corsicatech.com/blog/
+
+apis:
+- name: Corsica API
+  description: Provides IT, cybersecurity, AI consulting services as described on the services page.
+  humanURL: https://corsicatech.com/services/
+  baseURL: null
+  aid: corsicatech:corsica-api
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
